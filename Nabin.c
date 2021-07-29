@@ -22,8 +22,8 @@ student input_details(){
     // Address
     printf("Student's Address:");
     fgets(s1.address, sizeof(s1.address), stdin);  // read string
-     
-   
+    
+
     //Department
     printf("Department:");
     fgets(s1.department, sizeof(s1.department), stdin);  // read string
