@@ -2,7 +2,7 @@
 
 // structure student
 typedef struct {
-    char name[20], address[20], dob[20], department[30];
+    char name[30], address[30], dob[20], department[30];
     int id;
     float marks[7];
 
