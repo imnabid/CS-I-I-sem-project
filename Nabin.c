@@ -4,13 +4,15 @@
 typedef struct {
     char name[20], address[20], dob[20], department[30];
     int id;
-    float marks[6];
+    float marks[7];
 
 
 }student;
 
+student s1;
+
 student input_details(){
-    student s1;
+    
     // Name
     printf("Student's Full Name: ");
     fgets(s1.name, sizeof(s1.name), stdin);  // read string
@@ -34,14 +36,10 @@ student input_details(){
     
     // Marks
     printf("Student's marks in:\n");
-    char subjects[6][10] = {"MATH101","COMP102","ENGG111","EDRG101","PHY101","CHEM101"};
-    for(int i=0; i<6; i++){
+    char subjects[7][10] = {"MATH101","PHYS101","CHEM101","COMP102","ENGG111","ENGG101","EDRG101"};
+    for(int i=0; i<7; i++){
         printf("%s: ",subjects[i]);
         scanf("%f",&s1.marks[i]);
     }
     return s1;
-}
-int main(){
-    input_details();
-    return 0;
 }
