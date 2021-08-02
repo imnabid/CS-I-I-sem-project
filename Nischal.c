@@ -1,20 +1,24 @@
 #include "Nabin.c"
 
+//structure result 
 typedef struct{
     float gpa[7];
     char *grade[7];
     float TGPA[7];
-    float CGPA;   
+    float CGPA;
+    float sumTGPA;   
 }result;
 
 result r1;
 
+//function calculation
 result calculation(student s1){
 
     float credit[7] = {3,3,3,3,3,2,2};
     float tCredit = 19,sumTGPA=0;
     int i=0;
     for(i=0;i<7;i++){
+        //else-if ladder to compute gpa and grade for each subject
         if(s1.marks[i]>=80 && s1.marks[i]<=100){
             r1.gpa[i] = 4.00;
             r1.grade[i] = "A ";
@@ -66,8 +70,8 @@ result calculation(student s1){
             
         }
         r1.TGPA[i] =r1.gpa[i]*credit[i];
-        sumTGPA += r1.TGPA[i];
+        r1.sumTGPA += r1.TGPA[i];
 }
-        r1.CGPA = sumTGPA/tCredit;
+        r1.CGPA = r1.sumTGPA/tCredit;
         return r1;
 }
