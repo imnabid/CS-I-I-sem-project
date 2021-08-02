@@ -2,13 +2,14 @@
 
 // structure student
 typedef struct {
-    char name[30], address[30], dob[20], department[30];
+    char name[30], address[30], dob[20], level[30];
     int id;
     float marks[7];
 
 
 }student;
 
+// defining student struct s1 for global use
 student s1;
 
 student input_details(){
@@ -27,8 +28,8 @@ student input_details(){
     
 
     //Department
-    printf("Department:");
-    fgets(s1.department, sizeof(s1.department), stdin);  // read string
+    printf("Level:");
+    fgets(s1.level, sizeof(s1.level), stdin);  // read string
     
     // id
     printf("ID: ");

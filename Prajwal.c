@@ -3,7 +3,7 @@
 
 //output function
 void output(student s1,result r1){
-	printf("Department : %s\n",s1.department);
+	printf("Department : %s\n",s1.level);
 	printf("Name : %s\n",s1.name);
 	printf("Birth Date : %s\n",s1.dob);
 	printf("Examination ID : 202101-%d\n\n",s1.id);
