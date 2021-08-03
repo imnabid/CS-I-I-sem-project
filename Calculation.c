@@ -1,4 +1,4 @@
-#include "Nabin.c"
+#include "Input.c"
 
 //structure result 
 typedef struct{

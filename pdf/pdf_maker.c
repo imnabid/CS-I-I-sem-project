@@ -1,4 +1,4 @@
-#include "..\Prajwal.c"
+#include "..\Output.c"
 
 int pass_value_to_python(student s1, result r1){
    FILE *f = fopen("storage.txt", "w");

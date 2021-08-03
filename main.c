@@ -1,6 +1,5 @@
 
 #include "database.c"
-#include <ctype.h>
 
 int main(){
     char user_ans,x;

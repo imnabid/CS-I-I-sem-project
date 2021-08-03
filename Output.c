@@ -1,5 +1,5 @@
-#include "Nischal.c"
-#include  <time.h>
+#include "Calculation.c"
+
 
 
 //output function
@@ -41,7 +41,7 @@ void output(student s1,result r1){
 		printf(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n");
 
 
-    printf("GPA : %.2f",r1.CGPA);
+    printf("GPA(Grade Point Average): %.2f",r1.CGPA);
 }
 
 

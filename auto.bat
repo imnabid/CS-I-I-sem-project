@@ -1,3 +1,3 @@
 @echo off
-cd C:\Users\Nabin\Desktop\comp102\CS_project\pdf
+cd pdf
 python pdf_maker.py

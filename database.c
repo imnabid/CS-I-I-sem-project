@@ -1,7 +1,5 @@
 #include ".\pdf\pdf_maker.c"
-#include<string.h>
-#include <stdlib.h>
-#include<stdbool.h>
+
 
 void add_csv(){
     FILE *fp;
