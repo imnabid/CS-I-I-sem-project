@@ -16,20 +16,21 @@ student input_details(){
     
     // Name
     printf("Student's Full Name: ");
-    fgets(s1.name, sizeof(s1.name), stdin);  // read string
+    gets(s1.name);  // read string
+    
     
     // dob
     printf("Date of birth dd-mm-yyyy: ");
-    fgets(s1.dob, sizeof(s1.dob), stdin);  // read string
+    gets(s1.dob);  // read string
     
     // Address
     printf("Student's Address:");
-    fgets(s1.address, sizeof(s1.address), stdin);  // read string
+    gets(s1.address);  // read string
     
 
     //Department
     printf("Level:");
-    fgets(s1.level, sizeof(s1.level), stdin);  // read string
+    gets(s1.level);  // read string
     
     // id
     printf("ID: ");

@@ -1,14 +1,18 @@
 #include "Nischal.c"
+#include  <time.h>
 
 
 //output function
 void output(student s1,result r1){
+	
+	system("cls"); //clear the screen
+	printf("\n\n");
 	printf("Department : %s\n",s1.level);
 	printf("Name : %s\n",s1.name);
 	printf("Birth Date : %s\n",s1.dob);
-	printf("Examination ID : 202101-%d\n\n",s1.id);
+	printf("Examination ID : %d\n",s1.id);
 	printf("Address : %s\n",s1.address);
-	printf("\n\n");
+	printf("\n");
 
 	//marks
 	int credit[7] = {3,3,3,3,3,2,2};
@@ -17,10 +21,14 @@ void output(student s1,result r1){
 	int i;
  	char subjects[7][10] = {"MATH101","PHYS101","CHEM101","COMP102","ENGG111","ENGG101","EDRG101"};
 	char fullSubjects[7][50] = {"  Calculus & Linear Algebra    ","       General Physics I       ","       General Chemistry       ","     Computer Programming      ","    Element of Engineering I   ","Engineering Project Preparation","     Engineering Drawing I     "};
-	
+	// for current time
+	time_t t = time(NULL);
+  	struct tm tm = *localtime(&t);
+  	printf("%d-%02d-%02d \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
+
 	//console marksheet
 	printf(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n");
-	printf("| Year I; Semester I                                                       18th August, 2021  |\n");
+	printf("| Year I Semester I                                                               %d-%02d-%02d  |\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
 	printf("...............................................................................................\n");
 	printf("| Course No \t\tCourse Title\t\t  Marks\t   Credit  Grade  Grade Val   Grade P |\n");
     for(int i=0; i<7; i++){

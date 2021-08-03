@@ -1,6 +1,7 @@
 from fpdf import FPDF
 import datetime
 import random
+import os
 
 WIDTH = 210
 HEIGHT = 297
@@ -78,3 +79,5 @@ pdf.cell(48, 7, 'GPA (Grade Point Average)')
 pdf.cell(0,7,f'= {data[-1]}')
 
 pdf.output('marksheet.pdf', 'F')
+# auto open pdf
+os.startfile('marksheet.pdf')
