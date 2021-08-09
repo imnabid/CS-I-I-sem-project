@@ -21,21 +21,20 @@ void output(student s1, result r1){
 	// for displaying current date in the marksheet
 	time_t t = time(NULL);
   	struct tm tm = *localtime(&t);
-  	printf("%d-%02d-%02d \n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
 
 	//console marksheet
-	printf(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n");
-	printf("| Year I Semester I                                                               %d-%02d-%02d  |\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
-	printf("...............................................................................................\n");
-	printf("| Course No \t\tCourse Title\t\t  Marks\t   Credit  Grade  Grade Val   Grade P |\n");
+	printf("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n");
+	printf("| Year I Semester I                                                               %d-%02d-%02d   |\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
+	printf("................................................................................................\n");
+	printf("| Course No \t\tCourse Title\t\t  Marks\t   Credit  Grade   Grade Val   Grade P |\n");
     for(int i=0; i<7; i++){
-		printf("...............................................................................................\n");
-        printf("| %s  |  %s  |  %*.2f  |   %d   |  %s  |   %.2f   |  %*.2f   |\n",subjects[i],fullSubjects[i],5,s1.marks[i],credit[i],r1.grade[i],r1.gpa[i],5,r1.TGPA[i]);
+		printf("................................................................................................\n");
+        printf("| %s  |  %s  |  %*.2f  |   %d   |  %s  |   %.2f   |  %*.2f   |\n",subjects[i],fullSubjects[i],6,s1.marks[i],credit[i],r1.grade[i],r1.gpa[i],5,r1.TGPA[i]);
         
     }
-		printf("...............................................................................................\n");	
-		printf("|          |                              Total|         |   19  |      |          |  %*.2f   |\n",5,r1.sumTGPA);
-		printf(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n");
+		printf("................................................................................................\n");	
+		printf("|          |                              Total|          |   19  |      |          |  %*.2f   |\n",5,r1.sumTGPA);
+		printf("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n");
 
 
     printf("GPA(Grade Point Average): %.2f",r1.CGPA);

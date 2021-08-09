@@ -1,4 +1,5 @@
 #include ".\pdf\pdf_maker.c"
+#define NO_CS_STUDENTS 61
 
 void add_to_csv(){
     FILE *fp;   
@@ -31,7 +32,7 @@ int access_database(){
     scanf("%d",&roll);
     printf("\n");
 
-    for(int i=0; i<7; i++) //Each loop is a row in the database
+    for(int i=0; i<NO_CS_STUDENTS; i++) //Each loop is a row in the database
     {   
         if(i==0){
             continue; 

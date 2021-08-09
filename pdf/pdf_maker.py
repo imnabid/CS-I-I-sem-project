@@ -73,7 +73,7 @@ for j in range(8):
         pdf.cell(W[i],8,ROW[i][j],border=1,align='C',ln= 1 if i==6 else 0)
 pdf.cell(15)
 pdf.cell(48, 7, 'GPA (Grade Point Average)')
-pdf.cell(0,7,f'= {data[-1]}')
+pdf.cell(0,7,f' = {data[-1]}')
 
 pdf.output('marksheet.pdf', 'F')
 # auto open pdf
