@@ -17,12 +17,11 @@ typedef struct {
 // defining student struct s1 for global use
 student s1;
 
-student input_details(){
+void input_details(){
     
     // Name
     printf("Student's Full Name: ");
-    gets(s1.name);  // read string
-    
+    gets(s1.name);  // read string    
     
     // dob
     printf("Date of birth dd-mm-yyyy: ");
@@ -30,10 +29,9 @@ student input_details(){
     
     // Address
     printf("Student's Address:");
-    gets(s1.address);  // read string
-    
+    gets(s1.address);  // read string    
 
-    //Department
+    //Level
     printf("Level:");
     gets(s1.level);  // read string
     
@@ -48,5 +46,5 @@ student input_details(){
         printf("%s: ",subjects[i]);
         scanf("%f",&s1.marks[i]);
     }
-    return s1;
+    
 }

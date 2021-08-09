@@ -1,6 +1,6 @@
 #include "..\Output.c"
 
-int pass_value_to_python(student s1, result r1){
+void pass_value_to_python(student s1, result r1){
    FILE *f = fopen("storage.txt", "w");
     if (f == NULL)
     {
@@ -24,6 +24,6 @@ int pass_value_to_python(student s1, result r1){
     }
     fprintf(f,"%.2f",r1.CGPA);
     fclose(f);
-    return 0;
+ 
    
 }

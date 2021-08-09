@@ -1,23 +1,19 @@
 #include ".\pdf\pdf_maker.c"
 
-
-void add_csv(){
-    FILE *fp;
-   
+void add_to_csv(){
+    FILE *fp;   
     fp = fopen("database.csv","a");
     fprintf(fp,"%d,%s,%s,%s,%s,",s1.id,s1.name,s1.level,s1.dob,s1.address);
     for(int i=0; i<7; i++){
         // Ternary operation used for the last value inorder to break row
         i<6 ? fprintf(fp,"%.2f,",s1.marks[i]):fprintf(fp,"%.2f\n",s1.marks[i]);
     }
-   
     fclose(fp);
 }
 
 //function to convert string num to float
 float float_extractor(char *num){
-    float val;
-   
+    float val;   
     val = atof(num);
     return val;
 }
@@ -38,7 +34,7 @@ int access_database(){
     for(int i=0; i<7; i++) //Each loop is a row in the database
     {   
         if(i==0){
-            continue;
+            continue; 
         }
         fgets(row, sizeof(row), fp); 
 
@@ -46,10 +42,7 @@ int access_database(){
         num = atoi(temp); //to convert string into int
         if(num == roll){ //to match the roll no with the ID and when true exit the loop
             break;
-        }
-        
-        
-        
+        }         
     }
     if (num != roll)
         return 0;
@@ -75,12 +68,6 @@ int access_database(){
     }
     //to add ID and other basic info
     s1.id = atoi(students_data[0]);
-    // s1.name[30] = students_data[1];
-    // s1.level[30] = students_data[2];
-    // s1.dob[20] = students_data[3];
-    // s1.address[30] = students_data[4];
-    // printf(" hi %s\n",s1.name);
-    
     strcpy(s1.name,students_data[1]);
     strcpy(s1.level,students_data[2]);
     strcpy(s1.dob,students_data[3]);

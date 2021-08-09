@@ -54,10 +54,7 @@ pdf.set_font('Times', '', 12)
 
 pdf.cell(0,10,ln=1)
 text(pdf,dictionary)
-
-
-
-       
+      
 # Table
 # head head
 pdf.cell(15)

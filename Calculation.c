@@ -7,12 +7,12 @@ typedef struct{
     float TGPA[7];
     float CGPA;
     float sumTGPA;   
-}result;
-
+} result;
+// Here result r1 has global scope
 result r1;
 
-//function calculation
-result calculation(student s1){
+//function to perform calculations
+void calculation(student s1){
 
     float credit[7] = {3,3,3,3,3,2,2};
     float tCredit = 19,sumTGPA=0;
@@ -61,17 +61,16 @@ result calculation(student s1){
         }
         else if(s1.marks[i]>=40 && s1.marks[i]<=44){
             r1.gpa[i] = 1.00;
-            r1.grade[i]= "D ";
-            
+            r1.grade[i]= "D ";            
         }
         else{
             r1.gpa[i] = 0.00;
-            r1.grade[i]= "F*";
-            
+            r1.grade[i]= "F*";            
         }
+        
         r1.TGPA[i] =r1.gpa[i]*credit[i];
         r1.sumTGPA += r1.TGPA[i];
 }
         r1.CGPA = r1.sumTGPA/tCredit;
-        return r1;
+        
 }
